@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/api/index.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/erc8004/(.*)",
+      "dest": "backend/api/index.ts"
+    },
+    {
+      "src": "/erc8004",
+      "dest": "backend/api/index.ts"
+    }
+  ]
+}
