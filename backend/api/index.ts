@@ -3,7 +3,7 @@ import express from "express";
 // Load environment variables
 const config = {
   port: parseInt(process.env.PORT || "3001"),
-  baseUrl: process.env.BASE_URL || "https://erc8004-surf-liquid.vercel.app",
+  baseUrl: (process.env.BASE_URL || "https://erc8004-surf-liquid.vercel.app").trim(),
   rpcUrl: process.env.RPC_URL || "https://mainnet.base.org",
   chainId: parseInt(process.env.CHAIN_ID || "8453"),
   chainName: process.env.CHAIN_NAME || "Base",
